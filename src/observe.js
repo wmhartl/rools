@@ -16,4 +16,4 @@ const observe = (object, onChange) => {
   return new Proxy(object, handler);
 };
 
-module.exports = observe;
+export default observe;

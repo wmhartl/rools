@@ -1,10 +1,10 @@
-const RuleSet = require('./RuleSet');
-const Logger = require('./Logger');
-const Delegator = require('./Delegator');
-const WorkingMemory = require('./WorkingMemory');
-const ConflictResolution = require('./ConflictResolution');
-const observe = require('./observe');
-const RuleError = require('./RuleError');
+import RuleSet from './RuleSet';
+import Logger from './Logger';
+import Delegator from './Delegator';
+import WorkingMemory from './WorkingMemory';
+import ConflictResolution from './ConflictResolution';
+import observe from './observe';
+import RuleError from './RuleError';
 
 class Rools {
   constructor({ logging } = {}) {
@@ -126,4 +126,4 @@ class Rools {
   }
 }
 
-module.exports = Rools;
+export default Rools;

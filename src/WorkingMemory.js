@@ -1,4 +1,4 @@
-const Action = require('./Action');
+import Action from './Action';
 
 class WorkingMemory {
   constructor({ actions, premises }) {
@@ -52,4 +52,4 @@ class WorkingMemory {
   }
 }
 
-module.exports = WorkingMemory;
+export default WorkingMemory;

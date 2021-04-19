@@ -1,4 +1,4 @@
-const Rools = require('./Rools');
-const Rule = require('./Rule');
+import Rools from './Rools';
+import Rule from './Rule';
 
-module.exports = { Rools, Rule };
+export { Rools, Rule };
