@@ -5,4 +5,4 @@ class RuleError extends Error {
   }
 }
 
-module.exports = RuleError;
+export default RuleError;

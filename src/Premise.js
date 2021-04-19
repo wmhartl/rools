@@ -13,4 +13,4 @@ class Premise {
   }
 }
 
-module.exports = Premise;
+export default Premise;

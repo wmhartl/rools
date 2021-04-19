@@ -1,9 +1,9 @@
-const isBoolean = require('lodash/isBoolean');
-const isFunction = require('lodash/isFunction');
-const isInteger = require('lodash/isInteger');
-const isString = require('lodash/isString');
-const assert = require('assert');
-const arrify = require('arrify');
+import isBoolean from 'lodash/isBoolean';
+import isFunction from 'lodash/isFunction';
+import isInteger from 'lodash/isInteger';
+import isString from 'lodash/isString';
+import assert from 'assert';
+import arrify from 'arrify';
 
 class Rule {
   constructor({
@@ -20,47 +20,47 @@ class Rule {
   }
 
   assert() {
-    assert(
+    assert.ok(
       this.name,
       '"name" is required',
     );
-    assert(
+    assert.ok(
       isString(this.name),
       '"name" must be a string',
     );
-    assert(
+    assert.ok(
       this.when.length,
       '"when" is required with at least one premise',
     );
-    assert(
+    assert.ok(
       this.when.reduce((acc, premise) => acc && isFunction(premise), true),
       '"when" must be a function or an array of functions',
     );
-    assert(
+    assert.ok(
       this.then,
       '"then" is required',
     );
-    assert(
+    assert.ok(
       isFunction(this.then),
       '"then" must be a function',
     );
-    assert(
+    assert.ok(
       isInteger(this.priority),
       '"priority" must be an integer',
     );
-    assert(
+    assert.ok(
       isBoolean(this.final),
       '"final" must be a boolean',
     );
-    assert(
+    assert.ok(
       this.extend.reduce((acc, rule) => acc && (rule instanceof Rule), true),
       '"extend" must be a Rule or an array of Rules',
     );
-    assert(
+    assert.ok(
       !this.activationGroup || isString(this.activationGroup),
       '"activationGroup" must be a string',
     );
   }
 }
 
-module.exports = Rule;
+export default Rule;
