@@ -16,4 +16,4 @@ class Delegator {
   }
 }
 
-module.exports = Delegator;
+export default Delegator;

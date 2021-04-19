@@ -1,9 +1,9 @@
-const assert = require('assert');
-const md5 = require('md5');
-const uniqueid = require('uniqueid');
-const Action = require('./Action');
-const Premise = require('./Premise');
-const Rule = require('./Rule');
+import assert from 'assert';
+import md5 from 'md5';
+import uniqueid from 'uniqueid';
+import Action from './Action';
+import Premise from './Premise';
+import Rule from './Rule';
 
 class RuleSet {
   constructor() {
@@ -63,4 +63,4 @@ class RuleSet {
   }
 }
 
-module.exports = RuleSet;
+export default RuleSet;

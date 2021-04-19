@@ -1,4 +1,4 @@
-const intersection = require('lodash/intersection');
+import intersection from 'lodash/intersection';
 
 class ConflictResolution {
   constructor({ strategy = 'ps', logger }) {
@@ -69,4 +69,4 @@ class ConflictResolution {
   }
 }
 
-module.exports = ConflictResolution;
+export default ConflictResolution;
